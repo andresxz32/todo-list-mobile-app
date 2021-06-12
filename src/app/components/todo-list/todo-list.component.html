@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="container__background-img">
+        <div class="container__block-title">
+            <div class="bock-title">
+                <h1>TODO</h1>
+            </div>
+            <div class="block-theme">
+                <i><img src="../../../assets/img/icon-sun.svg"></i>
+            </div>
+            <!-- <i><img src="../../../assets/img/icon-moon.svg"></i> -->
+        </div>
+
+        <div class="container__new-todo">
+            <div class="new-todo">
+                <button class="container__check check-inactive">
+                    <!-- <img  src="../../../assets/img/icon-check.svg"> -->
+                </button>
+                <h5>Create a new todo...</h5>
+            </div>
+
+            <div class="container__list-todo">
+                <div class="new-todo border-bottom" *ngFor="let todo of todoList">
+                    <div class="container__alig-items">
+                        <button class="container__check check-inactive">
+                            <!-- <img  src="../../../assets/img/icon-check.svg"> -->
+                        </button>
+                        <h5>{{todo.todoName}}</h5>
+                    </div>
+                    <div class="container__img-cross">
+                        <p><img src="../../../assets/img/icon-cross.svg"></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container__background-color">
+    </div>
+</div>

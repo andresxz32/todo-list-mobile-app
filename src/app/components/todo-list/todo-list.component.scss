@@ -1,0 +1,109 @@
+@import "../../../styles.scss";
+
+:host {
+  .container {
+    width: 100%;
+    height: 100%;
+    background-color: $Very-Dark-Blue;
+
+    .container__background-img {
+      height: 24vh;
+      width: 100vw;
+      background-image: url(../../../assets/img/bg-mobile-dark.jpg);
+      position: relative;
+
+      .container__block-title {
+        width: 90%;
+        height: 25%;
+        position: absolute;
+        right: 8px;
+        top: 22px;
+        display: flex;
+        justify-content: space-between;
+
+        .bock-title {
+          color: $title-color;
+          letter-spacing: 8px;
+        }
+
+        .block-theme {
+          margin: 20px 18px 0px 0px;
+
+        }
+      }
+
+      .container__new-todo {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 100px;
+        height: 50px;
+        width: 86%;
+        background-color: $Very-Dark-Desaturate-Blue;
+        margin-right: 15px;
+        border-radius: 5px;
+
+        .new-todo {
+          display: flex;
+
+
+          .container__check {
+            width: 25px;
+            margin: 14px;
+            height: 25px;
+            border-radius: 100%;
+            // &.check-active {
+            //   background: $Check-Background;
+            //   border: none;
+            // }
+
+            &.check-inactive {
+              background: $Very-Dark-Desaturate-Blue;
+              border: 1px solid $Very-Dark-Grayish-Blue;
+
+            }
+          }
+
+          h5 {
+            color: $Very-Dark-Grayish-Blue
+          }
+
+        }
+
+        .container__list-todo {
+          width: 100%;
+          top: 66px;
+          height: 466px;
+          background-color: #25273c;
+          border-radius: 8px;
+          position: absolute;
+
+          .border-bottom {
+            border-bottom: 1px solid $Very-Dark-Grayish-Blue;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .container__alig-items{
+                display: flex;
+            }
+              img {
+                margin: 3px 15px 0px 5px;
+                width: 13px;
+                height: 13px;
+              }
+            
+          }
+
+        }
+
+      }
+    }
+
+    .container__background-color {
+      height: 76vh;
+      width: 100vw;
+
+
+    }
+  }
+}

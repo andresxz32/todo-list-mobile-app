@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@401;700&display=swap');
+
+html,
+body {
+  height: 100%;
+  font-size: 15px;
+}
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+body {
+  margin: 0;
+}
+
+/******************Primary colors**************/
+
+$Bright-Blue: hsl(220, 98%, 61%);
+$Check-Background: linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%)); 
+$title-color: #ffffffeb;
+
+
+/******************Dark Theme Color**************/
+
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturate-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue: hsl(234, 39%, 85%);
+$Light-Grayish-Blue: hsl(236, 33%, 92%); //for hover
+$Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$Very-Dark-Grayish-Blue: #686b93;
+
+
+/******************Light Theme Color**************/
+
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+$Light-Grayish-Blue: hsl(233, 11%, 84%);
+$Dark-Grayish-Blue: hsl(236, 9%, 61%);
+$Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+
+/***********************************************/
