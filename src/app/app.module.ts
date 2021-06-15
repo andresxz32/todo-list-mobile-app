@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { SortablejsModule } from 'ngx-sortablejs';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SortablejsModule.forRoot({ animation: 150 }),
   ],
   providers: [],
   bootstrap: [AppComponent]

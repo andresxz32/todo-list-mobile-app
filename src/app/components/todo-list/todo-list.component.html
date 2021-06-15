@@ -12,25 +12,37 @@
 
         <div class="container__new-todo">
             <div class="new-todo">
-                <button class="container__check check-inactive">
-                    <!-- <img  src="../../../assets/img/icon-check.svg"> -->
-                </button>
-                <h5>Create a new todo...</h5>
+                <input type="checkbox" id="checkBoxOne" class="container__check" />
+                <h5 class="title-item">Create a new todo...</h5>
             </div>
 
             <div class="container__list-todo">
-                <div class="new-todo border-bottom" *ngFor="let todo of todoList">
-                    <div class="container__alig-items">
-                        <button class="container__check check-inactive">
-                            <!-- <img  src="../../../assets/img/icon-check.svg"> -->
-                        </button>
-                        <h5>{{todo.todoName}}</h5>
-                    </div>
-                    <div class="container__img-cross">
-                        <p><img src="../../../assets/img/icon-cross.svg"></p>
-                    </div>
 
+                <div [sortablejs]="todoList">
+                    <div class="new-todo border-bottom" *ngFor="let todo of todoList;let i = index"  draggable="true">
+                        <div class="container__alig-items">
+                            <input type="checkbox" (change)="getCheckBox($event,i)" class="container__check" />
+                            <h5 [ngClass]="{'active-checked': todo.check}">{{todo.todoName}}</h5>
+                        </div>
+                        <div class="container__img-cross">
+                            <p><img src="../../../assets/img/icon-cross.svg"></p>
+                        </div>
+                    </div>
+                  </div>
+                <div class="container__count-items">
+                    <h5>5 items left</h5>
+                    <h5>Clear completed</h5>
                 </div>
+            </div>
+
+            <div class="container__list-todo container__filter-items">
+                <h5 (click)="changeType('all')" [ngClass]="{'active-filter': type === 'all'}">All</h5>
+                <h5 (click)="changeType('active')" [ngClass]="{'active-filter': type === 'active'}">Active</h5>
+                <h5 (click)="changeType('completed')" [ngClass]="{'active-filter': type === 'completed'}">Completed</h5>
+            </div>
+
+            <div class="container__list-todo container__drog">
+                <h5>Drog and drop to reorder list</h5>
             </div>
 
         </div>
